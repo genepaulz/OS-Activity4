@@ -23,7 +23,7 @@ void push(Stack s,stackItem item){
 		s->items[s->count++] = item;		
 	}
 	else{		
-		s->items = (stackItem**)realloc(s->items, ++s->size * sizeof(stackItem));
+		s->items = (stackItem*)realloc(s->items, ++s->size * sizeof(stackItem));
 		s->top = s->count;
 		s->items[s->count++] = item;
 	}
